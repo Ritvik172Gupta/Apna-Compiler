@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Readme - Custom Compiler IDE</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header>
+    <h1>Readme / Guidelines</h1>
+    <nav>
+      <a href="/">Editor</a> |
+      <a href="/readme">Readme / Docs</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>📘 Supported Functions (Extra than C++) </h2>
+      <ul class="List-functions">
+        <li><code>addInt(x, y)</code>: Adds two integers</li>
+        <li><code>addDouble(dx, dy)</code>: Adds two double values</li>
+        <li><code>concat(s1, s2)</code>: Concatenates two strings</li>
+        <li><code>multInt(x, y)</code>: Multiplies two integers</li>
+        <li><code>multDouble(dx, dy)</code>: Multiplies two doubles</li>
+        <li><code>maxInteg(x, y)</code>: Returns the maximum of two integers</li>
+        <li><code>maxDouble(dx, dy)</code>: Returns the maximum of two doubles</li>
+        <li><code>divInt(x, y)</code>: Divides two integers</li>
+        <li><code>divDouble(dx, dy)</code>: Divides two doubles</li>
+        <li><code>minInt(x, y)</code>: Returns the minimum of two integers</li>
+        <li><code>minDouble(dx, dy)</code>: Returns the minimum of two doubles</li>
+        <li><code>absInt(number)</code>: Returns absolute value of an integer</li>
+        <li><code>absDouble(number)</code>: Returns absolute value of a double</li>
+        <li><code>absFloat(number)</code>: Returns absolute value of a float</li>
+        <li><code>allTrue(container)</code>: Returns true if all elements in the container are true</li>
+        <li><code>toBytes(input)</code>: Converts a string to a byte vector</li>
+        <li><code>capitalize(input)</code>: Capitalizes the first letter of the string</li>
+        <li><code>title(input)</code>: Capitalizes the first letter of each word</li>
+        <li><code>swapCase(input)</code>: Swaps the case of each character</li>
+        <li><code>strCenter(input, width, fillchar)</code>: Centers the string with optional padding</li>
+        <li><code>strLjust(input, width, fillchar)</code>: Left-justifies the string with optional padding</li>
+        <li><code>strRjust(input, width, fillchar)</code>: Right-justifies the string with optional padding</li>
+        <li><code>strStartsWith(input, prefix)</code>: Checks if the string starts with the given prefix</li>
+        <li><code>strEndsWith(input, suffix)</code>: Checks if the string ends with the given suffix</li>
+        <li><code>strFind(input, substring)</code>: Finds the first index of a substring</li>
+        <li><code>strRFind(input, substring)</code>: Finds the last index of a substring</li>
+        <li><code>ord(character)</code>: Returns Unicode code point of the character</li>
+        <li><code>map(func, array)</code>: Applies a function to each element in an array</li>
+        <li><code>toBool(value)</code>: Converts an integer to boolean</li>
+        <li><code>chr(unicode)</code>: Returns the character for a Unicode value</li>
+        <li><code>complex(real, imag)</code>: Creates a complex number pair</li>
+        <li><code>divMod(dividend, divisor)</code>: Returns quotient and remainder</li>
+        <li><code>enumerate(iterable)</code>: Returns indexed pairs from an iterable</li>
+        <li><code>filter(iterable, predicate)</code>: Filters elements based on predicate function</li>
+        <li><code>toFloat(value)</code>: Converts string to float</li>
+        <li><code>isEven(number)</code>: Returns true if the number is even</li>
+        <li><code>isOdd(number)</code>: Returns true if the number is odd</li>
+        <li><code>isPrime(number)</code>: Returns true if the number is prime</li>
+        <li><code>factorial(number)</code>: Returns factorial of a number</li>
+        <li><code>gcd(a, b)</code>: Returns the greatest common divisor</li>
+        <li><code>lcm(a, b)</code>: Returns the least common multiple</li>
+        <li><code>reverseNumber(number)</code>: Returns the number with its digits reversed</li>
+        <li><code>isPalindrome(number)</code>: Checks if the number is a palindrome</li>
+        <li><code>isVowel(c)</code>: Checks if the character is a vowel</li>
+        <li><code>countDigits(number)</code>: Counts the number of digits in the number</li>
+        <li><code>sumOfDigits(number)</code>: Sums all digits in the number</li>
+        <li><code>isLeapYear(year)</code>: Checks if the year is a leap year</li>
+        <li><code>celsiusToFahrenheit(celsius)</code>: Converts Celsius to Fahrenheit</li>
+        <li><code>fahrenheitToCelsius(fahrenheit)</code>: Converts Fahrenheit to Celsius</li>
+        <li><code>strCopy(destination, source)</code>: Copies one C-string to another</li>
+      </ul>
+      
+    </section>
+
+    <section>
+      <h2>✅ Syntax Guidelines</h2>
+      <ul>
+        <li>All variables must be declared at the top</li>
+        <li>Functions must be defined before use</li>
+        <li>Follow standard C++ syntax with extended keywords</li>
+      </ul>
+
+      <h3>Sample:</h3>
+      <h3>📌 Example Usage:</h3>
+<pre><code>
+int[] nums = [1, 2, 3];
+bool res = allTrue(nums);               // true if all are non-zero
+int[] squares = map(square, nums);      // [1, 4, 9]
+
+int x = 5, y = 10;
+int sum = addInt(x, y);                 // 15
+int product = multInt(x, y);            // 50
+int maxVal = maxInteg(x, y);            // 10
+
+double dx = 5.5, dy = 3.2;
+double dsum = addDouble(dx, dy);        // 8.7
+double ddiv = divDouble(dx, dy);        // ~1.718
+
+string name = \"john doe\";
+string titled = title(name);            // \"John Doe\"
+string swapped = swapCase(name);        // \"JOHN DOE\"
+
+bool check = isEven(10);                // true
+bool prime = isPrime(7);                // true
+int fact = factorial(5);                // 120
+
+int reversed = reverseNumber(1234);     // 4321
+bool isPal = isPalindrome(121);         // true
+
+char letter = chr(65);                  // 'A'
+int ascii = ord('A');                   // 65
+
+float tempC = 36.6;
+float tempF = celsiusToFahrenheit(tempC); // 97.88
+
+int year = 2024;
+bool leap = isLeapYear(year);          // true
+</code></pre>
+
+    </section>
+  </main>
+</body>
+</html>

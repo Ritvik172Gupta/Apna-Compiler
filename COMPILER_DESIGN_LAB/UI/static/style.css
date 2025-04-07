@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: larger;
+  }
+  header {
+    background-color: #343a40;
+    color: white;
+    padding: 1em;
+    text-align: center;
+  }
+  nav a {
+    color: #ffd700;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  main {
+    padding: 2em;
+  }
+  button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  pre {
+    background-color: #f0f0f0;
+    padding: 1em;
+    white-space: pre-wrap;
+  }
+
+.List-functions{
+  font-size: 1.2rem;
+  line-height: auto;
+}
+
+.List-functions li{
+  margin-bottom: 5px;
+}
+
+.List-functions li code{
+  font-weight: bolder;
+}
